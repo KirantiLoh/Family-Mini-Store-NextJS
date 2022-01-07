@@ -34,6 +34,7 @@ const HomePage = (props) => {
     }
 
     useEffect(() => {
+        console.log(products)
         setHeaderHeight(document.querySelector('.navbar').clientHeight)
     }, [])
 
