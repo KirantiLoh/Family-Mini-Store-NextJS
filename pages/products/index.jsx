@@ -19,7 +19,7 @@ const AllProductsPage = (props) => {
 
 export default AllProductsPage
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     let response = await fetch(`https://family-mini-store-backend.herokuapp.com/api/products`, {
             'method':'GET',
             'headers':{

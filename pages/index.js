@@ -88,7 +88,7 @@ const HomePage = (props) => {
 
 export default HomePage
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let response = await fetch(`https://family-mini-store-backend.herokuapp.com/api/products`, {
     'method':'GET',
     'headers':{
