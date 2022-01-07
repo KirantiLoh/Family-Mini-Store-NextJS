@@ -1,0 +1,374 @@
+:root {
+    --primary: #ff2a31;
+    --accent: #2171aa;
+    --secondary-accent: #4180a9;
+    --primary-text-color: #ffffffef;
+    --secondary-text-color: #000000;
+    --tertiary-text-color: #616161;
+    --background-color: #ffffff;
+    --secondary-background-color: #004d80;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--secondary-accent);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--secondary-background-color);
+}
+
+span {
+    z-index: -1;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(.7);
+}
+
+.primary-btn {
+    display: block;
+    color: var(--primary-text-color);
+    background-color: var(--primary);
+    margin: 10px 0;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 3px var(--primary) solid;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.title {
+    padding: 5px 15px;
+}
+
+
+/* Navbar Style */
+
+.navbar,
+.navbar-sticky {
+    z-index: 10;
+    width: 100%;
+}
+
+.navbar {
+    backdrop-filter: blur(16px);
+    padding-bottom: 20px;
+}
+
+.navbar-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.upper,
+.lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.navbar-sticky .upper {
+    background-color: var(--secondary-background-color);
+}
+
+.navbar-sticky .lower {
+    background-color: var(--secondary-accent);
+}
+
+.lower::-webkit-scrollbar {
+    display: none;
+}
+
+.logo a {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    color: var(--primary-text-color);
+}
+
+.logo a span {
+    margin-left: 7px;
+    z-index: 0;
+}
+
+#logo-img {
+    width: 75px;
+}
+
+.search-form {
+    padding: 20px;
+    width: 300px;
+}
+
+.navbar #id_name {
+    width: 100%;
+    padding: 5px 7px;
+    font-size: 1.2rem;
+    color: var(--background-color);
+    background-color: transparent;
+    border: 3px var(--background-color) solid;
+    border-radius: 10px;
+    backdrop-filter: blur(16px);
+    transition: .3s;
+}
+
+#id_name {
+    width: 100%;
+    padding: 5px 7px;
+    font-size: 1.2rem;
+    color: var(--background-color);
+    border: 3px var(--background-color) solid;
+    border-radius: 3px;
+    backdrop-filter: blur(16px);
+    transition: .3s;
+}
+
+.navbar #id_name::placeholder {
+    color: var(--background-color);
+}
+
+#id_name:focus {
+    outline: none;
+    background-color: var(--background-color);
+    color: var(--secondary-text-color);
+}
+
+.navlinks {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.navlinks li {
+    flex: 1 1;
+    width: max-content;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: .2s;
+}
+
+.navlinks li:hover {
+    background-color: var(--secondary-background-color);
+}
+
+.navlinks li a {
+    color: var(--primary-text-color);
+    white-space: nowrap;
+    display: block;
+    padding: 20px;
+}
+
+.navbar .navlinks li {
+    margin: 0 10px;
+    border-radius: 10px;
+    border: 3px var(--background-color) solid;
+    backdrop-filter: blur(16px);
+}
+
+.navbar .navlinks li a {
+    padding: 10px 20px;
+}
+
+
+/* Home */
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(6px);
+    margin: 10px 20px;
+    padding: 20px;
+    border: 3px var(--background-color) solid;
+}
+
+.heading {
+    font-size: clamp(40px, 5vw, 4rem);
+    color: var(--background-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.desc {
+    color: var(--secondary-text-color);
+}
+
+#shop-now-btn {
+    width: max-content;
+}
+
+.product-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#show-more {
+    font-size: 7rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-text-color);
+    transition: .3s;
+}
+
+#show-more span {
+    font-size: 1.5rem;
+    color: var(--secondary-text-color);
+}
+
+#show-more:hover {
+    color: var(--primary);
+}
+
+.inner-content {
+    display: flex;
+}
+
+footer {
+    padding: 20px;
+    height: auto;
+    text-align: center;
+    color: var(--primary-text-color);
+    background-color: var(--secondary-background-color);
+}
+
+.contact-form,
+.social-links {
+    text-align: left;
+    flex: 1 1 auto;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+.contact-form .title {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--background-color);
+}
+
+#id_username,
+#id_email,
+#id_message {
+    display: block;
+    resize: vertical;
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#send-message-btn {
+    padding: 10px 25px;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links li {
+    margin: 10px;
+}
+
+.social-links li h3 {
+    font-size: 2rem;
+}
+
+
+/* Products Page */
+
+.products {
+    list-style: none;
+    display: grid;
+    padding: 15px;
+    gap: 15px;
+    align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.product {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 11px 0 #afafaf;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.product-name {
+    font-size: 1.15rem;
+    max-width: 30ch;
+    word-break: break-all;
+}
+
+.product-image {
+    max-width: 100%;
+    width: -webkit-fill-available;
+}
+
+.netto {
+    color: var(--tertiary-text-color);
+}
+
+.category {
+    color: var(--tertiary-text-color);
+}
+
+@media screen and (max-width: 570px) {
+    .upper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-form,
+    #id_name {
+        width: 100%;
+    }
+    .search-form {
+        padding: 10px;
+    }
+    .inner-content {
+        flex-direction: column;
+    }
+}
