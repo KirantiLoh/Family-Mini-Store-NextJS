@@ -21,7 +21,7 @@ const Products = (props) => {
                     
                     <li className="product" key={product.id}>
                         <div className="product-detail">
-                                <Image src={product.image} alt={product.name} layout='responsive' width={500} height={500} className="product-image"/>
+                            <Image src={product.image} alt={product.name} width={500} height={500} layout='responsive' className="product-image"/>
                             <h1 className="product-name">{product.name}</h1>
                             <p className='netto'>Netto : {product.netto} g</p>
                             <p className="category">Category : <Link href={`category/${product.category.replace(' ', '-')}`} ><a className="category">{product.category}</a></Link></p>
