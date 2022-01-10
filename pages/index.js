@@ -81,6 +81,7 @@ const HomePage = (props) => {
                     </ul>
                 </div>
             <small>&copy; Copyright 2022, Family Mini Store</small> 
+            <small>Developed by Maurice Yang</small>
             </footer>
         </div>
     )
