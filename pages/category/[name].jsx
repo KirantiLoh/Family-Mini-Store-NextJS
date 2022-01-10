@@ -52,7 +52,7 @@ export default FilteredProductsPage
 
 
 
-export async function getServerSideProps({params}) {
+export async function getStaticProps({params}) {
     console.log(params.name)
     let response = await fetch(`https://family-mini-store-backend.herokuapp.com/api/products/${params.name}`, {
             'method':'GET',
@@ -64,13 +64,15 @@ export async function getServerSideProps({params}) {
     if (response.status === 200) {
         return {
             props: {
-                products: data
+                products: data,
+                revalidate: 60*60
             }
         }
     } else {
         return {
             props: {
-                message: data.message
+                message: data.message,
+                revalidate: 60*60
             }
         }
     }
