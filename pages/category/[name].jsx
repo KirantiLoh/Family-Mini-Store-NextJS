@@ -50,10 +50,26 @@ const FilteredProductsPage = (props) => {
 
 export default FilteredProductsPage
 
+export async function getStaticPaths() {
+    let response = await fetch(`https://family-mini-store-backend.herokuapp.com/api/categories`, {
+        'method':'GET',
+        'headers':{
+            'Content-Type': 'application/json'
+        }
+    })
+    let data = await response.json()
+    const paths = data.map(category => {
+        return {
+            params: {name: category.name}
+        }
+    })
+    return {
+        paths,
+        fallback: false
+    }
+}
 
-
-export async function getServerSideProps({params}) {
-    console.log(params.name)
+export async function getStaticProps({params}) {
     let response = await fetch(`https://family-mini-store-backend.herokuapp.com/api/products/${params.name}`, {
             'method':'GET',
             'headers':{

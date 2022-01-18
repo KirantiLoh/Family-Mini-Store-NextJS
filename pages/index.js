@@ -28,8 +28,10 @@ const HomePage = (props) => {
             setName('')
             setEmail('')
             setMessage('')
+            alert('Terimakasih sudah menghubungi kami, pesan anda akan dibalas secepatnya!')
         }, (error) => {
             console.log(error.text)
+            alert('Maaf, terjadi error...')
         })
     }
 

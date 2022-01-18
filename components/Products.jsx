@@ -14,14 +14,14 @@ const Products = (props) => {
         }
         
     }
+
     return (
         <ul className="products">
             {products.map((product) => {
                 return (
-                    
                     <li className="product" key={product.id}>
                         <div className="product-detail">
-                            <img src={product.image} alt={product.name} className='product-image'/>
+                            <Image src={product.image} alt={product.name} layout='responsive' width={500} height={500} className='product-image' priority/>
                             <h1 className="product-name">{product.name}</h1>
                             <p className='netto'>Netto : {product.netto} g</p>
                             <p className="category">Category : <Link href={`category/${product.category.replace(' ', '-')}`} ><a className="category">{product.category}</a></Link></p>
@@ -30,7 +30,7 @@ const Products = (props) => {
                         <a href={product.link} target='_blank' rel='noreferrer' className="primary-btn"><FontAwesomeIcon icon={faShoppingCart} /> Tampilkan Produk</a>
                     </li>
                 )})}
-                {(props.amount && products.length >= 1) ? 
+                {(props.amount && !props.paginate && products.length >= 1) ? 
                     <Link href='/products' ><a className="product" id='show-more'><FontAwesomeIcon icon={faArrowCircleRight} /> <span>Lihat Semua Produk</span> </a></Link>
                     : null}
         </ul>

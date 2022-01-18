@@ -46,13 +46,13 @@ const Header = (props) => {
             </div>
             <div className="lower">
                 <ul className="navlinks">
-                <li><Link href='/category/biscuit'><a><FontAwesomeIcon icon={faCookie} /> Biscuits</a></Link></li>
-                <li><Link href='/category/coffee'><a><FontAwesomeIcon icon={faCoffee} /> Coffee</a></Link></li>
-                <li><Link href='/category/tea'><a><FontAwesomeIcon icon={faMugHot} /> Tea</a></Link></li>
-                <li><Link href='/category/sweets'><a><FontAwesomeIcon icon={faCandyCane} /> Sweets</a></Link></li>
-                <li><Link href='/category/dairy'><a><FontAwesomeIcon icon={faCheese} /> Dairy</a></Link></li>
-                <li><Link href='/category/snack'><a><FontAwesomeIcon icon={faIceCream} /> Snack</a></Link></li>
-                <li><Link href='/category/new-year'><a><FontAwesomeIcon icon={faGifts} /> New Year</a></Link></li>
+                <li><Link href='category/biscuit'><a><FontAwesomeIcon icon={faCookie} /> Biscuits</a></Link></li>
+                <li><Link href='category/coffee'><a><FontAwesomeIcon icon={faCoffee} /> Coffee</a></Link></li>
+                <li><Link href='category/tea'><a><FontAwesomeIcon icon={faMugHot} /> Tea</a></Link></li>
+                <li><Link href='category/sweets'><a><FontAwesomeIcon icon={faCandyCane} /> Sweets</a></Link></li>
+                <li><Link href='category/dairy'><a><FontAwesomeIcon icon={faCheese} /> Dairy</a></Link></li>
+                <li><Link href='category/snack'><a><FontAwesomeIcon icon={faIceCream} /> Snack</a></Link></li>
+                <li><Link href='category/new-year'><a><FontAwesomeIcon icon={faGifts} /> New Year</a></Link></li>
             </ul>
             </div>
             
