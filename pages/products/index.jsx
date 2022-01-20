@@ -12,7 +12,7 @@ const AllProductsPage = (props) => {
         <div className="all-products-container">
             <Header className={'navbar-sticky'}/>
             <h1 className="title">Semua Produk</h1>
-            <Products products={products} amount={5} paginate={true}/>
+            <Products products={products}/>
         </div>
         
     )
